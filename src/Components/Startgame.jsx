@@ -1,4 +1,3 @@
-import styles from './Startgame.module.css'
 import styled from 'styled-components'
 
 const Startgame = ({toggle}) => {
@@ -20,7 +19,7 @@ const Startgame = ({toggle}) => {
 
         <Container>
         <div className='img'>
-          <img src='/Images/Dices.png' alt='Dice Image'/>
+          <Img src='/Images/Dices.png' alt='Dice Image'/>
         </div>
 
         <div className="content">
@@ -50,6 +49,12 @@ const Container = styled.div `
         font-size: 70px;
         white-space: nowrap;
     }
+  }
+`;
+
+const Img = styled.img `
+  &:hover{
+  filter: drop-shadow(0px 0px 20px black)
   }
 `;
 
