@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { useState } from 'react';
 
-const Numberselector = () => {
+const Numberselector = ({selectnumber, setselectnumber}) => {
 
     const arrNumber = [1,2,3,4,5,6];
-    const [selectnumber, setselectnumber] = useState();
+    
     console.log(selectnumber);
   return (
     <NumberSelectorContainer>
@@ -24,9 +24,9 @@ export default Numberselector
 
 const Box = styled.div `
   border: 1px solid black;
-  width: 72px;
-  height: 72px;
-  font-size: 24px;
+  width: 62px;
+  height: 62px;
+  font-size: 20px;
   font-weight: 700;
   display: grid;
   place-items: center;
@@ -41,7 +41,7 @@ const NumberSelectorContainer = styled.div `
   }
 
   p{
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     display:flex;
     flex-direction: column;
