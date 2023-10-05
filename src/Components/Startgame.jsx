@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Button } from '../Styled/Button'
 
 const Startgame = ({toggle}) => {
   return (
@@ -24,7 +25,7 @@ const Startgame = ({toggle}) => {
 
         <div className="content">
           <h1>DICE GAME</h1>
-          <Button onClick={toggle}>Play Now</Button>
+          <Button className='pos' onClick={toggle}>Play Now</Button>
         </div>
         </Container>
   )
@@ -49,6 +50,11 @@ const Container = styled.div `
         font-size: 70px;
         white-space: nowrap;
     }
+  
+  .pos{
+    position: absolute;
+  }
+    
   }
 `;
 
@@ -58,24 +64,3 @@ const Img = styled.img `
   }
 `;
 
-const Button = styled.button `
-  position: absolute;
-  padding: 8px 50px;
-  right: 10px;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
-  border: 2px solid transparent;
-  transition: 0.4s ease-in;
-
-  &:hover{
-    cursor:pointer;
-    background-color: #edf2f4;
-    color: black;
-    border: 2px solid black;
-    box-shadow: 0px 0px 20px #9f86c0;
-    transition: 0.2s ease-in;
-  }
-`;
